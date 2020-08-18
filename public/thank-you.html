@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laura Fletcher</title>
+    <link href="./dist/css/main.min.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <span class="logo">My Web Site</span>
+        <a id="toggleMenu">Menu</a>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="contact.php">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+<h1>Thank you for reaching out.</h1>
+<p>I will get back to you as soon as possible.</p>
+</main>
+<script>
+
+    var toggleMenu = document.getElementById('toggleMenu');
+    var nav = document.querySelector('nav');
+    toggleMenu.addEventListener(
+      'click',
+      function(){
+        if(nav.style.display=='block'){
+          nav.style.display='none';
+        }else{
+          nav.style.display='block';
+        }
+      }
+    );
+  </script>
+</body>
+</html>
