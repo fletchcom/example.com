@@ -1,23 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laura Fletcher</title>
-    <link href="./dist/css/main.min.css" type="text/css" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <span class="logo">My Web Site</span>
-        <a id="toggleMenu">Menu</a>
-        <nav>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="resume.html">Resume</a></li>
-            <li><a href="contact.php">Contact</a></li>
-          </ul>
-        </nav>
-      </header>
+<?php
+// require '../core/bootstrap.php';
+
+//Build the page metadata
+$meta = [];
+$meta['description'] = "MicroTrain2009 Resume For Web Development";
+$meta['keywords'] = "MicroTrain2009, resume, web, development";
+
+$content = <<<EOT
 <main>
 <section><h1>Laura Fletcher</h1></section>
 <div>
@@ -79,20 +68,6 @@
 </section>
 </div>
 </main>
-<script>
-
-    var toggleMenu = document.getElementById('toggleMenu');
-    var nav = document.querySelector('nav');
-    toggleMenu.addEventListener(
-      'click',
-      function(){
-        if(nav.style.display=='block'){
-          nav.style.display='none';
-        }else{
-          nav.style.display='block';
-        }
-      }
-    );
-  </script>
-</body>
-</html>
+EOT;
+    
+require './core/layout.php';

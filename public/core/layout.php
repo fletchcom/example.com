@@ -13,8 +13,11 @@
         <a id="toggleMenu">Menu</a>
         <nav>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="resume.html">Resume</a></li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="resume.php">Resume</a></li>
+            <li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>
+            <li><a class="nav-link" href="logout.php">Logout</a></li>
+            <li class="nav-item"><a class="nav-link" href="register.php">Register</a></li>
             <li><a href="contact.php">Contact</a></li>
           </ul>
         </nav>
