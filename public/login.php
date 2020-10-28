@@ -2,6 +2,7 @@
 require './core/bootstrap.php';
 // 1. Connect to the database
 require './core/db_connect.php';
+include './core/app_logic.php';
 
 $goto = $_SERVER['PHP_SELF'];
 //$goto = '/';
@@ -63,6 +64,7 @@ $content=<<<EOT
             name="password" 
             type="password"
         >
+        <p><a href="enter_email.php">Forgot your password?</a></p>
     </div>
     <input name="goto" value="{$goto}" type="hidden">
     <input type="submit" class="btn btn-primary">
