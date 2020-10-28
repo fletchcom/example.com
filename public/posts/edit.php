@@ -1,8 +1,7 @@
 <?php
 require './../core/functions.php';
-require '../../config/keys.php';
+require './../core/bootstrap.php';
 require './../core/db_connect.php';
-require './../core/session.php';
 
 // Get the post
 $get = filter_input_array(INPUT_GET);
@@ -72,6 +71,8 @@ if(!empty($input)){
         $message = 'Something bad happened';
     }
 }
+
+checkSession();
 
 $content = <<<EOT
 <h1>Edit: {$row['title']}</h1>

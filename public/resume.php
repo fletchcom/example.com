@@ -1,10 +1,10 @@
 <?php
-// require '../core/bootstrap.php';
+require './core/bootstrap.php';
 
 //Build the page metadata
 $meta = [];
-$meta['description'] = "MicroTrain2009 Resume For Web Development";
-$meta['keywords'] = "MicroTrain2009, resume, web, development";
+$meta['description'] = "Laura Fletcher Resume";
+$meta['keywords'] = "Laura Fletcher Resume";
 
 $content = <<<EOT
 <main>

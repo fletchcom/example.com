@@ -2,6 +2,16 @@
 require './../core/bootstrap.php';
 include './../core/db_connect.php';
 
+// Remove tools & activity log metabox from dashboard for <= editors
+function TRIM_ADMIN_MENU() {
+  global $current_user;
+  if(!current_user_can('administrator')) {
+      remove_menu_page( 'tools.php' ); // No tools for <= editors
+      @remove_menu_page( 'activity_log_page' ); // Activity log
+  }
+}
+add_action('admin_init', 'TRIM_ADMIN_MENU');
+
 $input = filter_input_array(INPUT_GET);
 $slug = preg_replace("/[^a-z0-9-]+/", "", $input['slug']);
 
@@ -9,6 +19,8 @@ $content=null;
 $stmt = $pdo->prepare('SELECT * FROM posts WHERE slug = ?');
 $stmt->execute([$slug]);
 $row = $stmt->fetch();
+
+checkSession();
 
 $meta=[];
 $meta['title']=$row['title'];

@@ -21,6 +21,8 @@ if(!empty($input['confirm'])){
   }
 }
 
+checkSession();
+
 $meta=[];
 $meta['title']="DELETE: {$row['title']}";
 

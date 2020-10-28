@@ -13,6 +13,7 @@ while ($row = $stmt->fetch())
 
 $content .= "<br><br><a href=\"add.php\">New Post</a>";
 
+checkSession();
 
 include './../core/layout.php';
 

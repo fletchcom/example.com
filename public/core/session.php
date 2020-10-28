@@ -18,5 +18,4 @@ function checkSession(){
     $qs = !empty($_SERVER['QUERY_STRING'])?"?{$_SERVER['QUERY_STRING']}":false;
     header('Location: /login.php?goto='.$goto.$qs);
   }
-
 }

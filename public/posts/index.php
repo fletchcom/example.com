@@ -1,6 +1,6 @@
 <?php
 include './../core/db_connect.php';
-require './../core/session.php';
+require './../core/bootstrap.php';
 
 $content=null;
 $stmt = $pdo->query("SELECT * FROM posts");
@@ -13,5 +13,6 @@ while ($row = $stmt->fetch())
 
 $content .= "<br><br><a href=\"add.php\">New Post</a>";
 
+checkSession();
 
 include './../core/layout.php';

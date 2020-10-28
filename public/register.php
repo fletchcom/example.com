@@ -1,5 +1,5 @@
 <?php
-require './core/session.php';
+require './core/bootstrap.php';
 require './core/db_connect.php';
 require './core/about/src/validation/validate.php';
 
@@ -25,7 +25,7 @@ if(!empty($input)){
             'message'=>'Please enter a valid email'
         ],[
             'rule'=>'notEmpty',
-            'message'=>'Please enter a email'
+            'message'=>'Please enter an email'
         ]],
 
         'first_name'=>[[
@@ -84,7 +84,7 @@ if(!empty($input)){
                 'hash'=>$hash
             ]);
 
-            header('LOCATION: /login.php');
+            header('LOCATION: ./login.php');
 
         } catch(PDOException $e) {
             $message="<div class=\"alert alert-danger\">{$e->errorInfo[2]}</div>";

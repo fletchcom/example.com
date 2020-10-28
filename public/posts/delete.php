@@ -1,7 +1,6 @@
 <?php
-require '../../config/keys.php';
+require './../core/bootstrap.php';
 require './../core/db_connect.php';
-require './../core/session.php';
 
 $args=[
   'id'=>FILTER_UNSAFE_RAW,
@@ -21,6 +20,8 @@ if(!empty($input['confirm'])){
     header('Location: /example.com/public/posts/');
   }
 }
+
+checkSession();
 
 $meta=[];
 $meta['title']="DELETE: {$row['title']}";

@@ -1,8 +1,7 @@
 <?php
 require './../core/functions.php';
-require '../../config/keys.php';
+require './../core/bootstrap.php';
 require './../core/db_connect.php';
-require './../core/session.php';
 
 $message=null;
 
@@ -39,6 +38,8 @@ if(!empty($input)){
         $message = 'Something bad happened';
     }
 }
+
+checkSession();
 
 $content = <<<EOT
 <h1>Add a New Post</h1>

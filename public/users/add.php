@@ -42,6 +42,8 @@ if(!empty($input)){
     }
 }
 
+checkSession();
+
 $content = <<<EOT
 <h1>Add a New Post</h1>
 {$message}

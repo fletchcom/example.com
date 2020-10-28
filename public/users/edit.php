@@ -73,6 +73,8 @@ if(!empty($input)){
     }
 }
 
+checkSession();
+
 $content = <<<EOT
 <h1>Edit: {$row['title']}</h1>
 {$message}

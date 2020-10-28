@@ -1,10 +1,7 @@
-
-
 <?php
 $message = "";
 
 require './core/processContactForm.php';
-require './core/session.php';
 
 $content = <<<EOT
 <form action="contact.php" method="POST">

@@ -1,7 +1,7 @@
 <?php
 require './core/about/src/validation/validate.php';
 require '../vendor/autoload.php';
-require '../config/keys.php';
+require './core/bootstrap.php';
 use Mailgun\Mailgun;
 use about\validation;
 
